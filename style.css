@@ -1,0 +1,53 @@
+:root {
+	--airline-blue: #0d6efd;
+	--seat-available: #28a745;
+	--seat-booked: #dc3545;
+	--seat-selected: #0d6efd;
+}
+
+body {
+	background: #f4f7fb;
+}
+
+.page-header {
+	background: linear-gradient(90deg, #0d6efd 0%, #3b82f6 100%);
+	color: #fff;
+}
+
+.seat-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(56px, 1fr));
+	gap: 12px;
+}
+
+.seat-btn {
+	border: none;
+	color: #fff;
+	font-weight: 600;
+	padding: 10px 0;
+	border-radius: 8px;
+}
+
+.seat-available {
+	background: var(--seat-available);
+}
+
+.seat-booked {
+	background: var(--seat-booked);
+}
+
+.seat-selected {
+	background: var(--seat-selected);
+}
+
+.legend-dot {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 8px;
+}
+
+.card-title {
+	color: var(--airline-blue);
+}
