@@ -1,23 +1,90 @@
 :root {
-	--airline-blue: #0d6efd;
-	--seat-available: #28a745;
-	--seat-booked: #dc3545;
-	--seat-selected: #0d6efd;
+	--airline-blue: #0c2d57;
+	--airline-sky: #4aa3ff;
+	--airline-ice: #eef5ff;
+	--airline-gray: #e3e8f1;
+	--seat-available: #4aa3ff;
+	--seat-booked: #9aa6b2;
+	--seat-selected: #0c2d57;
+	--text-dark: #0f1e3a;
 }
 
 body {
-	background: #f4f7fb;
+	background: linear-gradient(180deg, #f7f9fc 0%, #eef2f8 100%);
+	color: var(--text-dark);
 }
 
 .page-header {
-	background: linear-gradient(90deg, #0d6efd 0%, #3b82f6 100%);
+	background: linear-gradient(120deg, #0c2d57 0%, #1f4f8f 60%, #4aa3ff 120%);
 	color: #fff;
+}
+
+.page-header svg {
+	filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+}
+
+.card {
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 18px 40px rgba(15, 30, 58, 0.08);
+}
+
+.flight-info {
+	background: linear-gradient(120deg, rgba(255, 255, 255, 0.92), rgba(238, 245, 255, 0.95));
+}
+
+
+.cabin {
+	background: linear-gradient(180deg, #f9fbff 0%, #eef3fb 100%);
+	border-radius: 20px;
+	padding: 16px;
+	border: 1px solid rgba(12, 45, 87, 0.08);
+}
+
+.cockpit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: rgba(12, 45, 87, 0.6);
+	background: var(--airline-ice);
+	border-radius: 999px;
+	padding: 6px 16px;
+	margin-bottom: 16px;
 }
 
 .seat-grid {
 	display: grid;
-	grid-template-columns: repeat(4, minmax(56px, 1fr));
-	gap: 12px;
+	grid-template-columns: 24px repeat(2, minmax(52px, 1fr)) 28px repeat(2, minmax(52px, 1fr));
+	gap: 12px 14px;
+	align-items: center;
+}
+
+.seat-label,
+.row-label {
+	font-size: 12px;
+	font-weight: 600;
+	color: rgba(12, 45, 87, 0.7);
+	text-align: center;
+}
+
+.row-label {
+	background: rgba(12, 45, 87, 0.06);
+	border-radius: 8px;
+	padding: 6px 0;
+}
+
+.label-spacer {
+	background: transparent;
+}
+
+.aisle {
+	background: linear-gradient(180deg, rgba(12, 45, 87, 0.05), rgba(12, 45, 87, 0));
+	border-radius: 12px;
+	height: 100%;
 }
 
 .seat-btn {
@@ -25,19 +92,29 @@ body {
 	color: #fff;
 	font-weight: 600;
 	padding: 10px 0;
-	border-radius: 8px;
+	border-radius: 14px;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+	box-shadow: 0 10px 18px rgba(12, 45, 87, 0.16);
 }
 
 .seat-available {
-	background: var(--seat-available);
+	background: linear-gradient(135deg, #4aa3ff 0%, #2f7fe6 100%);
+}
+
+.seat-available:hover {
+	transform: translateY(-2px) scale(1.02);
+	box-shadow: 0 12px 20px rgba(74, 163, 255, 0.35);
 }
 
 .seat-booked {
-	background: var(--seat-booked);
+	background: #9aa6b2;
+	opacity: 0.6;
+	box-shadow: none;
 }
 
 .seat-selected {
-	background: var(--seat-selected);
+	background: linear-gradient(135deg, #0c2d57 0%, #1f4f8f 100%);
+	box-shadow: 0 0 0 2px rgba(74, 163, 255, 0.35), 0 12px 24px rgba(12, 45, 87, 0.35);
 }
 
 .legend-dot {
@@ -50,4 +127,44 @@ body {
 
 .card-title {
 	color: var(--airline-blue);
+}
+
+.summary-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.summary-card {
+	background: #fff;
+	border-radius: 14px;
+	padding: 12px 14px;
+	box-shadow: 0 12px 24px rgba(12, 45, 87, 0.08);
+}
+
+.summary-card.highlight {
+	background: linear-gradient(135deg, rgba(74, 163, 255, 0.2) 0%, rgba(12, 45, 87, 0.15) 100%);
+}
+
+@media (max-width: 991px) {
+	.seat-grid {
+		grid-template-columns: 22px repeat(2, minmax(48px, 1fr)) 22px repeat(2, minmax(48px, 1fr));
+		gap: 10px 10px;
+	}
+}
+
+@media (max-width: 575px) {
+	.page-header {
+		text-align: left;
+	}
+
+	.seat-grid {
+		grid-template-columns: 20px repeat(2, minmax(44px, 1fr)) 18px repeat(2, minmax(44px, 1fr));
+		gap: 8px 8px;
+	}
+
+	.seat-btn {
+		padding: 8px 0;
+		font-size: 12px;
+	}
 }
