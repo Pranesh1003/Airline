@@ -1,6 +1,6 @@
 :root {
-	--airline-blue: #0c2d57;
-	--airline-sky: #4aa3ff;
+	--airline-blue: #1a2f57;
+	--airline-sky: #1a2;
 	--airline-ice: #eef5ff;
 	--airline-gray: #e3e8f1;
 	--seat-available: #4aa3ff;
@@ -15,7 +15,7 @@ body {
 }
 
 .page-header {
-	background: linear-gradient(120deg, #0c2d57 0%, #1f4f8f 60%, #4aa3ff 120%);
+	background: #0b1f3a;
 	color: #fff;
 }
 
