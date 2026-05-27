@@ -1,6 +1,6 @@
 :root {
 	--airline-blue: #1a2f57;
-	--airline-sky: #1a2;
+	--airline-sky: #4aa3ff;
 	--airline-ice: #eef5ff;
 	--airline-gray: #e3e8f1;
 	--seat-available: #4aa3ff;
@@ -166,5 +166,143 @@ body {
 	.seat-btn {
 		padding: 8px 0;
 		font-size: 12px;
+	}
+}
+
+.login-page {
+	background: #191970;
+	min-height: 100vh;
+}
+
+.login-shell {
+	max-width: 980px;
+}
+
+.login-panel {
+	background: linear-gradient(160deg, rgba(11, 31, 58, 0.95) 0%, rgba(11, 31, 58, 0.78) 100%);
+	border-radius: 20px;
+	padding: 32px;
+	color: #fff;
+	box-shadow: 0 20px 45px rgba(4, 15, 36, 0.4);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.login-brand {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+.brand-icon {
+	width: 44px;
+	height: 44px;
+	border-radius: 14px;
+	background: rgba(74, 163, 255, 0.2);
+	display: grid;
+	place-items: center;
+	color: var(--airline-sky);
+}
+
+.login-illustration {
+	margin-top: 32px;
+	padding: 18px 20px;
+	border-radius: 16px;
+	background: rgba(255, 255, 255, 0.08);
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 14px;
+	letter-spacing: 0.4px;
+}
+
+.login-card {
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 0 18px 40px rgba(8, 22, 49, 0.15);
+}
+
+.login-tabs {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	background: #f4f6fb;
+	border-radius: 14px;
+	padding: 6px;
+	gap: 6px;
+}
+
+.tab-btn {
+	border: none;
+	background: transparent;
+	color: rgba(15, 30, 58, 0.7);
+	padding: 10px 12px;
+	border-radius: 12px;
+	font-weight: 600;
+	transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tab-btn.active {
+	background: #fff;
+	color: var(--airline-blue);
+	box-shadow: 0 10px 20px rgba(15, 30, 58, 0.08);
+}
+
+.tab-btn:hover {
+	color: var(--airline-blue);
+}
+
+.login-input {
+	border-radius: 12px;
+	border: 1px solid rgba(15, 30, 58, 0.12);
+	padding: 10px 14px;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-input:focus {
+	border-color: var(--airline-sky);
+	box-shadow: 0 0 0 0.2rem rgba(74, 163, 255, 0.2);
+}
+
+.login-btn {
+	border-radius: 12px;
+	background: linear-gradient(120deg, #0b1f3a 0%, #1f3b6b 100%);
+	border: none;
+	box-shadow: 0 12px 24px rgba(11, 31, 58, 0.25);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 14px 28px rgba(11, 31, 58, 0.35);
+}
+
+.register-fields {
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.register-fields.active {
+	max-height: 520px;
+	opacity: 1;
+}
+
+.register-btn {
+	border-radius: 12px;
+	border: 1px solid rgba(15, 30, 58, 0.15);
+	color: var(--airline-blue);
+}
+
+.register-btn:hover {
+	background: rgba(74, 163, 255, 0.12);
+}
+
+@media (max-width: 991px) {
+	.login-shell {
+		max-width: 100%;
+	}
+
+	.login-panel {
+		padding: 24px;
 	}
 }
