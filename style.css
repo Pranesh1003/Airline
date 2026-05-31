@@ -34,6 +34,30 @@ body {
 	background: linear-gradient(120deg, rgba(255, 255, 255, 0.92), rgba(238, 245, 255, 0.95));
 }
 
+.seat-page {
+	background: linear-gradient(180deg, #f7f9fc 0%, #e9eff8 100%);
+}
+
+.info-panel {
+	position: sticky;
+	top: 24px;
+}
+
+.detail-grid {
+	display: grid;
+	gap: 14px;
+}
+
+.summary-stack {
+	display: grid;
+	gap: 12px;
+}
+
+.bg-soft-blue {
+	background: rgba(74, 163, 255, 0.16);
+	color: var(--airline-blue);
+}
+
 
 .cabin {
 	background: linear-gradient(180deg, #f9fbff 0%, #eef3fb 100%);
@@ -61,6 +85,11 @@ body {
 	grid-template-columns: 24px repeat(2, minmax(52px, 1fr)) 28px repeat(2, minmax(52px, 1fr));
 	gap: 12px 14px;
 	align-items: center;
+}
+
+.seat-grid-modern {
+	grid-template-columns: repeat(2, minmax(64px, 1fr)) 36px repeat(2, minmax(64px, 1fr));
+	gap: 14px 18px;
 }
 
 .seat-label,
@@ -97,19 +126,32 @@ body {
 	box-shadow: 0 10px 18px rgba(12, 45, 87, 0.16);
 }
 
-.seat-available {
+.seat-btn:not(:disabled):hover {
+	transform: translateY(-2px) scale(1.02);
+	box-shadow: 0 12px 20px rgba(74, 163, 255, 0.35);
+}
+
+.seat-window {
 	background: linear-gradient(135deg, #4aa3ff 0%, #2f7fe6 100%);
 }
 
-.seat-available:hover {
-	transform: translateY(-2px) scale(1.02);
-	box-shadow: 0 12px 20px rgba(74, 163, 255, 0.35);
+.seat-middle {
+	background: linear-gradient(135deg, #6fb7ff 0%, #4c8fe9 100%);
+}
+
+.seat-aisle {
+	background: linear-gradient(135deg, #2f7fe6 0%, #1f5fba 100%);
+}
+
+.seat-available {
+	background: linear-gradient(135deg, #4aa3ff 0%, #2f7fe6 100%);
 }
 
 .seat-booked {
 	background: #9aa6b2;
 	opacity: 0.6;
 	box-shadow: none;
+	cursor: not-allowed;
 }
 
 .seat-selected {
@@ -123,6 +165,30 @@ body {
 	border-radius: 50%;
 	display: inline-block;
 	margin-right: 8px;
+}
+
+.legend-available {
+	background: var(--seat-available);
+}
+
+.legend-booked {
+	background: var(--seat-booked);
+}
+
+.legend-selected {
+	background: var(--seat-selected);
+}
+
+.legend-window {
+	background: #4aa3ff;
+}
+
+.legend-middle {
+	background: #6fb7ff;
+}
+
+.legend-aisle {
+	background: #2f7fe6;
 }
 
 .card-title {
@@ -146,10 +212,60 @@ body {
 	background: linear-gradient(135deg, rgba(74, 163, 255, 0.2) 0%, rgba(12, 45, 87, 0.15) 100%);
 }
 
+.seat-info-card {
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(238, 245, 255, 0.95));
+}
+
+.seat-info-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
+	margin-top: 16px;
+}
+
+.seat-legend {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 12px 16px;
+}
+
+.legend-item {
+	display: flex;
+	align-items: center;
+}
+
+.seat-pricing {
+	margin-top: 16px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 18px;
+	color: rgba(15, 30, 58, 0.7);
+	font-size: 14px;
+}
+
+.action-bar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
 @media (max-width: 991px) {
+	.info-panel {
+		position: static;
+	}
+
 	.seat-grid {
 		grid-template-columns: 22px repeat(2, minmax(48px, 1fr)) 22px repeat(2, minmax(48px, 1fr));
 		gap: 10px 10px;
+	}
+
+	.seat-grid-modern {
+		grid-template-columns: repeat(2, minmax(54px, 1fr)) 24px repeat(2, minmax(54px, 1fr));
+		gap: 10px 12px;
+	}
+
+	.seat-info-grid {
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -166,6 +282,10 @@ body {
 	.seat-btn {
 		padding: 8px 0;
 		font-size: 12px;
+	}
+
+	.action-bar {
+		flex-direction: column;
 	}
 }
 

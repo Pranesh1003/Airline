@@ -10,181 +10,232 @@
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
+	<body class="seat-page">
 		<header class="page-header py-4 mb-4">
 			<div class="container">
-				<div class="d-flex align-items-center gap-3">
-					<span class="bg-white bg-opacity-25 rounded-circle p-2">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							aria-hidden="true"
-						>
-							<path d="M2 16l20-5-20-5 4 5-4 5z" />
-							<path d="M10 12h8" />
-						</svg>
-					</span>
-					<div>
-						<h1 class="h3 mb-1">Seat Availability & Selection</h1>
-						<p class="mb-0 text-white-50">Choose your preferred seat</p>
+				<div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+					<div class="d-flex align-items-center gap-3">
+						<span class="bg-white bg-opacity-25 rounded-circle p-2">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								aria-hidden="true"
+							>
+								<path d="M2 16l20-5-20-5 4 5-4 5z" />
+								<path d="M10 12h8" />
+							</svg>
+						</span>
+						<div>
+							<h1 class="h3 mb-1">Seat Availability &amp; Selection</h1>
+							<p class="mb-0 text-white-50">Choose your preferred seat and review pricing.</p>
+						</div>
 					</div>
+					<span class="badge rounded-pill bg-light text-dark px-3 py-2">
+						New York &rarr; London
+					</span>
 				</div>
-						<h6 class="mb-0">New York &rarr; London</h6>
+			</div>
 		</header>
 
 		<main class="container pb-5">
-			<div class="flight-info card border-0 shadow-sm mb-4">
-				<div class="card-body d-flex flex-wrap align-items-center justify-content-between gap-3">
-					<div>
-						<p class="text-uppercase small text-muted mb-1">Flight ID</p>
-						<h6 class="mb-0">AI-208</h6>
-					</div>
-					<div>
-						<p class="text-uppercase small text-muted mb-1">Route</p>
-						<h6 class="mb-0">New York -> London</h6>
-					</div>
-					<div>
-						<p class="text-uppercase small text-muted mb-1">Passenger</p>
-						<h6 class="mb-0">Alex Johnson</h6>
-					</div>
-					<div>
-						<p class="text-uppercase small text-muted mb-1">Boarding</p>
-						<h6 class="mb-0">07:45 AM</h6>
-					</div>
-				</div>
-			</div>
-
 			<div class="row g-4">
-				<div class="col-lg-7">
-					<div class="card border-0 shadow-sm">
+				<aside class="col-lg-4 col-xl-3">
+					<div class="info-panel">
+						<div class="card border-0 mb-4">
+							<div class="card-body">
+								<h5 class="card-title mb-3">Flight Details</h5>
+								<div class="detail-grid">
+									<div>
+										<p class="text-uppercase small text-muted mb-1">Flight Number</p>
+										<h6 class="mb-0">AI-208</h6>
+									</div>
+									<div>
+										<p class="text-uppercase small text-muted mb-1">From Airport</p>
+										<h6 class="mb-0">JFK</h6>
+									</div>
+									<div>
+										<p class="text-uppercase small text-muted mb-1">To Airport</p>
+										<h6 class="mb-0">LHR</h6>
+									</div>
+									<div>
+										<p class="text-uppercase small text-muted mb-1">Departure Time</p>
+										<h6 class="mb-0">07:45 AM</h6>
+									</div>
+									<div>
+										<p class="text-uppercase small text-muted mb-1">Arrival Time</p>
+										<h6 class="mb-0">08:20 PM</h6>
+									</div>
+									<div>
+										<p class="text-uppercase small text-muted mb-1">Travel Date</p>
+										<h6 class="mb-0">15 Aug 2026</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card border-0 mb-4">
+							<div class="card-body">
+								<h5 class="card-title mb-3">Passenger Details</h5>
+								<div class="detail-grid">
+									<div>
+										<p class="text-uppercase small text-muted mb-1">Passenger Name</p>
+										<h6 class="mb-0">Alex Johnson</h6>
+									</div>
+									<div>
+										<p class="text-uppercase small text-muted mb-1">Booking ID</p>
+										<h6 class="mb-0">BK-45892</h6>
+									</div>
+									<div>
+										<p class="text-uppercase small text-muted mb-1">Travel Class</p>
+										<h6 class="mb-0">Premium Economy</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card border-0">
+							<div class="card-body">
+								<h5 class="card-title mb-3">Fare Summary</h5>
+								<div class="summary-stack">
+									<div class="summary-card">
+										<p class="mb-1 text-muted">Base Fare</p>
+										<h6 class="mb-0">₹18,500</h6>
+									</div>
+									<div class="summary-card">
+										<p class="mb-1 text-muted">Seat Charge</p>
+										<h6 class="mb-0">₹0</h6>
+									</div>
+									<div class="summary-card highlight">
+										<p class="mb-1 text-muted">Total Amount</p>
+										<h6 class="mb-0">₹18,500</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+
+				<section class="col-lg-8 col-xl-9">
+					<div class="card border-0 mb-4">
 						<div class="card-body">
-							<h5 class="card-title mb-3">Seat Layout</h5>
+							<div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+								<div>
+									<h5 class="card-title mb-1">Aircraft Seat Layout</h5>
+									<p class="text-muted mb-0">Select a seat to view its pricing category.</p>
+								</div>
+								<span class="badge bg-soft-blue text-primary">Front of aircraft</span>
+							</div>
 							<div class="cabin">
-								<div class="cockpit">
-									<span>Front</span>
+								<div class="cockpit">Front</div>
+								<div class="seat-grid seat-grid-modern">
+									<button class="seat-btn seat-window" type="button">A1</button>
+									<button class="seat-btn seat-middle" type="button">A2</button>
+									<div class="aisle"></div>
+									<button class="seat-btn seat-aisle" type="button">A3</button>
+									<button class="seat-btn seat-window" type="button">A4</button>
+
+									<button class="seat-btn seat-window" type="button">B1</button>
+									<button class="seat-btn seat-middle" type="button">B2</button>
+									<div class="aisle"></div>
+									<button class="seat-btn seat-aisle" type="button">B3</button>
+									<button class="seat-btn seat-window" type="button">B4</button>
+
+									<button class="seat-btn seat-window seat-booked" type="button" disabled>
+										C1
+									</button>
+									<button class="seat-btn seat-middle" type="button">C2</button>
+									<div class="aisle"></div>
+									<button class="seat-btn seat-aisle seat-selected" type="button">C3</button>
+									<button class="seat-btn seat-window seat-booked" type="button" disabled>
+										C4
+									</button>
+
+									<button class="seat-btn seat-window" type="button">D1</button>
+									<button class="seat-btn seat-middle seat-booked" type="button" disabled>
+										D2
+									</button>
+									<div class="aisle"></div>
+									<button class="seat-btn seat-aisle" type="button">D3</button>
+									<button class="seat-btn seat-window" type="button">D4</button>
 								</div>
-								<div class="seat-grid">
-										<div class="row-label label-spacer"></div>
-										<div class="seat-label">A</div>
-										<div class="seat-label">B</div>
-										<div class="aisle"></div>
-										<div class="seat-label">C</div>
-										<div class="seat-label">D</div>
+							</div>
 
-									<div class="row-label">1</div>
-									<button class="seat-btn seat-available" type="button">A1</button>
-									<button class="seat-btn seat-booked" type="button">B1</button>
-									<div class="aisle"></div>
-									<button class="seat-btn seat-available" type="button">C1</button>
-									<button class="seat-btn seat-selected" type="button">D1</button>
+							<div class="card mt-4 border-0 seat-info-card">
+								<div class="card-body">
+									<h5 class="card-title mb-3">Selected Seat Information</h5>
+									<p class="text-muted mb-0">No seat selected</p>
+									<div class="seat-info-grid">
+										<div>
+											<p class="text-uppercase small text-muted mb-1">Seat Number</p>
+											<h6 class="mb-0">-</h6>
+										</div>
+										<div>
+											<p class="text-uppercase small text-muted mb-1">Seat Type</p>
+											<h6 class="mb-0">-</h6>
+										</div>
+										<div>
+											<p class="text-uppercase small text-muted mb-1">Additional Cost</p>
+											<h6 class="mb-0">-</h6>
+										</div>
+									</div>
+								</div>
+							</div>
 
-									<div class="row-label">2</div>
-									<button class="seat-btn seat-available" type="button">A2</button>
-									<button class="seat-btn seat-available" type="button">B2</button>
-									<div class="aisle"></div>
-									<button class="seat-btn seat-booked" type="button">C2</button>
-									<button class="seat-btn seat-available" type="button">D2</button>
-
-									<div class="row-label">3</div>
-									<button class="seat-btn seat-available" type="button">A3</button>
-									<button class="seat-btn seat-booked" type="button">B3</button>
-									<div class="aisle"></div>
-									<button class="seat-btn seat-available" type="button">C3</button>
-									<button class="seat-btn seat-available" type="button">D3</button>
-
-									<div class="row-label">4</div>
-									<button class="seat-btn seat-available" type="button">A4</button>
-									<button class="seat-btn seat-available" type="button">B4</button>
-									<div class="aisle"></div>
-									<button class="seat-btn seat-booked" type="button">C4</button>
-									<button class="seat-btn seat-available" type="button">D4</button>
+							<div class="card border-0 mt-4">
+								<div class="card-body">
+									<h5 class="card-title mb-3">Seat Legend</h5>
+									<div class="seat-legend">
+										<div class="legend-item">
+											<span class="legend-dot legend-available"></span>
+											<span>Available</span>
+										</div>
+										<div class="legend-item">
+											<span class="legend-dot legend-booked"></span>
+											<span>Booked</span>
+										</div>
+										<div class="legend-item">
+											<span class="legend-dot legend-selected"></span>
+											<span>Selected</span>
+										</div>
+										<div class="legend-item">
+											<span class="legend-dot legend-window"></span>
+											<span>Window</span>
+										</div>
+										<div class="legend-item">
+											<span class="legend-dot legend-middle"></span>
+											<span>Middle</span>
+										</div>
+										<div class="legend-item">
+											<span class="legend-dot legend-aisle"></span>
+											<span>Aisle</span>
+										</div>
+									</div>
+									<div class="seat-pricing">
+										<span>Window Seats: ₹500</span>
+										<span>Middle Seats: ₹300</span>
+										<span>Aisle Seats: ₹700</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="card border-0 shadow-sm mt-4">
-						<div class="card-body">
-							<h5 class="card-title mb-3">Seat Legend</h5>
-							<div class="d-flex flex-wrap gap-4">
-								<div class="d-flex align-items-center">
-									<span class="legend-dot" style="background: var(--seat-available)"></span>
-									<span>Available</span>
-								</div>
-								<div class="d-flex align-items-center">
-									<span class="legend-dot" style="background: var(--seat-booked)"></span>
-									<span>Booked</span>
-								</div>
-								<div class="d-flex align-items-center">
-									<span class="legend-dot" style="background: var(--seat-selected)"></span>
-									<span>Selected</span>
-								</div>
-							</div>
+						<div class="action-bar mt-4">
+							<button class="btn btn-primary px-4 py-2" type="button">
+								Confirm Seat Selection
+							</button>
+							<button class="btn btn-outline-secondary px-4 py-2" type="button">
+								Reset Selection
+							</button>
 						</div>
 					</div>
-				</div>
-
-				<div class="col-lg-5">
-					<div class="card border-0 shadow-sm">
-						<div class="card-body">
-							<h5 class="card-title mb-3">Passenger Seat Selection</h5>
-							<form>
-								<div class="mb-3">
-									<label class="form-label" for="passengerName">Passenger Name</label>
-									<input
-										class="form-control"
-										type="text"
-										id="passengerName"
-										placeholder="Enter passenger name"
-									/>
-								</div>
-								<div class="mb-3">
-									<label class="form-label" for="seatNumber">Seat Number</label>
-									<input
-										class="form-control"
-										type="text"
-										id="seatNumber"
-										placeholder="e.g., A3"
-									/>
-								</div>
-								<button class="btn btn-primary w-100" type="submit">
-									Confirm Seat
-								</button>
-							</form>
-						</div>
-					</div>
-
-					<div class="card border-0 shadow-sm mt-4">
-						<div class="card-body">
-							<h5 class="card-title mb-3">Seat Summary</h5>
-							<div class="summary-grid">
-								<div class="summary-card">
-									<p class="mb-1 text-muted">Total Seats</p>
-									<h5 class="mb-0">16</h5>
-								</div>
-								<div class="summary-card">
-									<p class="mb-1 text-muted">Available</p>
-									<h5 class="mb-0">11</h5>
-								</div>
-								<div class="summary-card">
-									<p class="mb-1 text-muted">Booked</p>
-									<h5 class="mb-0">4</h5>
-								</div>
-								<div class="summary-card highlight">
-									<p class="mb-1 text-muted">Selected</p>
-									<h5 class="mb-0">D1</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				</section>
 			</div>
 		</main>
 	</body>
